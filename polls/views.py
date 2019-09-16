@@ -31,9 +31,9 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 
-    def get_queryset(self):
-        question = Question.objects.get(pk=self.kwargs['pk'])
-        return question.choice_set
+    # def get_queryset(self):
+    #     question = Question.objects.get(pk=self.kwargs['pk'])
+    #     return question.choice_set
 
 
 def vote(request, question_id):
